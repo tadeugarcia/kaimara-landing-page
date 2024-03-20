@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=Montserrat:wght@500;700&display=swap');
+
+$green-40: #719556;
+$green-10A: #49851D1A;
+$green-500: #49851D;
+$green-600: #395C20;
+$green-900: #050505;
+
+$gray-100: #f8f9fa;
+$gray-300: #e9ecef;
+$gray-500: #ced4da;
+$gray-700: #6c757d;
+
+
+html {
+    height: 100%;
+    scroll-behavior: smooth;
+  }
+  
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    touch-action: pan-y;  /* Desabilita o zoom de página inteira */
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    background-color: #fff;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Kalam', cursive;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+
+  strong {
+    color: $green-600;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: inherit;
+    margin: inherit;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  }
+  
+
+  .input-group-text {
+    height: 38px;
+  }
+
+  
+  .btn {
+    padding: 12px;
+    letter-spacing: 0.04em;
+  }
+  
+  .btn-link, .btn-link:visited {
+    margin: 0 auto;
+    padding: 0;
+    color: $green-900;
+    font-weight: 700;
+    text-decoration: none;    
+
+    .mdi {
+      font-size: 24px;
+    }
+  }
+  
+  .btn-link:hover, .btn-link:active, .btn-link:focus {
+    color: $green-900;
+  }
+  
+  .btn.btn-primary, .btn.btn-primary.disabled, .btn.btn-primary:disabled {    
+    border: none;
+    background-color: $green-500;
+    color: white;
+  }
+  
+  .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus, .btn.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: $green-600;
+    color: white;
+  }
+
+  .btn.btn-outline-primary, .btn.btn-outline-primary:focus, .btn.btn-outline-primary.disabled, .btn.btn-outline-primary:disabled {    
+    background-color: white;
+    border-color: $gray-500;
+    color: $gray-700;
+
+    g {
+      fill: $gray-700;
+    }
+  }
+  
+  .btn.btn-outline-primary:hover, .btn.btn-outline-primary:active, .btn.btn-outline-primary:not(:disabled):not(.disabled):active,
+  .btn-check:checked+.btn, :not(.btn-check)+.btn:active {
+    background-color: $gray-100;
+    border-color: $green-500;
+    color: $green-500;
+
+    g {
+      fill: $green-500;
+    }
+  }
