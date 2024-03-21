@@ -87,5 +87,9 @@ module.exports = {
   modules,
   featureFlags: {
     product_categories: true,
+    tax_inclusive_pricing: false,
+    order_editing: false,
+    sales_channels: false,
+    publishable_api_keys: false,
   },
 };
