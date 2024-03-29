@@ -21,18 +21,6 @@ try {
   dotenv.config({ path: process.cwd() + "/" + ENV_FILE_NAME });
 } catch (e) {}
 
-// CORS when consuming Medusa from admin
-const ADMIN_CORS =
-  process.env.ADMIN_CORS || "https://viveiroprimavera.kaimara.com.br";
-
-// CORS to avoid issues when consuming Medusa from a client
-const STORE_CORS = process.env.STORE_CORS || "https://viveiroprimavera.kaimara.com.br";
-
-const DATABASE_URL =
-  process.env.DATABASE_URL || "postgres://default:Kpa4wPd7MyOv@ep-lucky-firefly-a4nczdgh.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require";
-
-const REDIS_URL = process.env.REDIS_URL || "redis://viveiroprimavera.kaimara.com.br";
-
 const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
