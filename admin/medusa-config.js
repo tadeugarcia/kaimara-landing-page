@@ -21,6 +21,18 @@ try {
   dotenv.config({ path: process.cwd() + "/" + ENV_FILE_NAME });
 } catch (e) {}
 
+// CORS when consuming Medusa from admin
+const ADMIN_CORS =
+  process.env.ADMIN_CORS || "http://localhost:7000,http://localhost:7001";
+
+// CORS to avoid issues when consuming Medusa from a client
+const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
+
+const DATABASE_URL =
+  process.env.DATABASE_URL || "postgres://localhost/medusa-starter-default";
+
+const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
+
 const plugins = [
   `medusa-fulfillment-manual`,
   `medusa-payment-manual`,
@@ -73,11 +85,4 @@ module.exports = {
   projectConfig,
   plugins,
   modules,
-  featureFlags: {
-    product_categories: true,
-    tax_inclusive_pricing: false,
-    order_editing: false,
-    sales_channels: false,
-    publishable_api_keys: false,
-  },
 };
