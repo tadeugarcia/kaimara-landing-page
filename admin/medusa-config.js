@@ -52,10 +52,18 @@ const plugins = [
       },
     },
   },
+  {
+    resolve: "medusa-plugin-sendgrid",
+    options: {
+      api_key: "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",
+      from: "naoresponda@kaimara.com.br",
+      order_placed_template: "d-0274cdac0d7a435298cfda8db04fbb89",
+    },
+  },
 ];
 
 const modules = {
-  /*eventBus: {
+  eventBus: {
     resolve: "@medusajs/event-bus-redis",
     options: {
       redisUrl: REDIS_URL
@@ -66,7 +74,7 @@ const modules = {
     options: {
       redisUrl: REDIS_URL
     }
-  },*/
+  },
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
@@ -76,8 +84,7 @@ const projectConfig = {
   store_cors: STORE_CORS,
   database_url: DATABASE_URL,
   admin_cors: ADMIN_CORS,
-  // Uncomment the following lines to enable REDIS
-  // redis_url: REDIS_URL
+  redis_url: REDIS_URL
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule} */
