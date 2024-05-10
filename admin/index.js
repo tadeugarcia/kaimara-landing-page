@@ -1,3 +1,5 @@
+import { corsHeaders } from 'cors.ts'
+
 const express = require("express")
 const { GracefulShutdownServer } = require("medusa-core-utils")
 
