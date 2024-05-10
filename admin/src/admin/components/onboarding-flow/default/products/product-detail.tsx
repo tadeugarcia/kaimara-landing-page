@@ -16,7 +16,7 @@ const ProductDetailDefault = ({ onNext, isComplete, data }: StepContentProps) =>
   const api_key = useMemo(() => keys?.[0]?.id || "", [keys])
   const backendUrl = process.env.MEDUSA_BACKEND_URL === "/" || process.env.MEDUSA_ADMIN_BACKEND_URL === "/" ? 
     location.origin :
-    process.env.MEDUSA_BACKEND_URL || process.env.MEDUSA_ADMIN_BACKEND_URL || "http://localhost:9000"
+    process.env.MEDUSA_BACKEND_URL || process.env.MEDUSA_ADMIN_BACKEND_URL || "postgres://postgres.cyaldmgcviavijxoulwf:vmoBY847F0GW8bf4@aws-0-sa-east-1.pooler.supabase.com:5432/postgres"
 
   useEffect(() => {
     if (!isLoading && !keys?.length) {
