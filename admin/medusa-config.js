@@ -75,6 +75,7 @@ const projectConfig = {
   cookieSecret: process.env.COOKIE_SECRET,
   store_cors: STORE_CORS,
   database_url: DATABASE_URL,
+  worker_mode: process.env.MEDUSA_WORKER_MODE,
   admin_cors: ADMIN_CORS,
   redis_url: REDIS_URL
 };
