@@ -22,16 +22,14 @@ try {
 } catch (e) {}
 
 // CORS when consuming Medusa from admin
-const ADMIN_CORS =
-  process.env.ADMIN_CORS || "https://viveiroprimavera.kaimara.com.br";
+const ADMIN_CORS = process.env.ADMIN_CORS;
 
 // CORS to avoid issues when consuming Medusa from a client
-const STORE_CORS = process.env.STORE_CORS || "https://viveiroprimavera.kaimara.com.br";
+const STORE_CORS = process.env.STORE_CORS;
 
-const DATABASE_URL =
-  process.env.DATABASE_URL || "postgres://postgres.cyaldmgcviavijxoulwf:vmoBY847F0GW8bf4@aws-0-sa-east-1.pooler.supabase.com:5432/postgres";
+const DATABASE_URL = process.env.DATABASE_URL;
 
-const REDIS_URL = process.env.REDIS_URL || "redis://default:AdT_AAIncDEyOTllMDA1YjZhNjU0MjA2ODhmYmIwMzgwZDViYTkwYXAxNTQ1Mjc@equal-drake-54527.upstash.io:6379";
+const REDIS_URL = process.env.REDIS_URL;
 
 const plugins = [
   `medusa-fulfillment-manual`,
