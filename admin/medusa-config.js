@@ -27,9 +27,9 @@ const ADMIN_CORS = process.env.ADMIN_CORS || "https://admin-viveiro-primavera-ad
 // CORS to avoid issues when consuming Medusa from a client
 const STORE_CORS = process.env.STORE_CORS;
 
-const DATABASE_URL = process.env.DATABASE_URL || "postgres://postgres:4a7f59f8a0960b74784d@admin-viveiro_primavera_db:5432/admin-viveiro_primavera";
+const DATABASE_URL = process.env.DATABASE_URL || "postgres://postgres:4a7f59f8a0960b74784d@161.35.133.165:5432/admin-viveiro_primavera";
 
-const REDIS_URL = process.env.REDIS_URL || "redis://default:2a9ea65b368f96215d95@admin-viveiro_primavera_redis:6379";
+const REDIS_URL = process.env.REDIS_URL || "redis://default:2a9ea65b368f96215d95@161.35.133.165:6379";
 
 const plugins = [
   `medusa-fulfillment-manual`,
