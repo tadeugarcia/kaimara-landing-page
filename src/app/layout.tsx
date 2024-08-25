@@ -18,9 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <Header />
-      <body className="min-h-screen max-w-7xl m-8 lg:m-auto lg:grid bg-teal-100 text-teal-950">{children}</body>
-      <Footer />
+      <body className="min-h-screen max-w-7xl m-8 lg:m-auto lg:grid bg-teal-100 text-teal-950">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
